@@ -1,13 +1,14 @@
 import React from 'react';
-import {ProductsContainer} from "../../styles/products";
 import {Container, Grid, useMediaQuery, useTheme} from "@mui/material";
 import {products} from "../../data";
-import SingleProduct from "./SingleProduct";
+import SingleProductMobile from "./SingleProductMobile";
+import SingleProductDesktop from "./SingleProductDesktop";
 
 
 const Products = () => {
     const theme = useTheme();
     const matches = useMediaQuery(theme.breakpoints.down('md'));
+
     const renderProduct = products.map(product => (
         <Grid
             item
@@ -19,7 +20,11 @@ const Products = () => {
             flexDirection="column"
                  alignItems={'center'}
         >
-            <SingleProduct product={product} matches={matches}/>
+            {matches ?
+                <SingleProductMobile product={product} matches={matches}/>
+                :<SingleProductDesktop product={product} matches={matches}/>
+            }
+
         </Grid>
     ))
 
