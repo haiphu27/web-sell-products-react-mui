@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import {useEffect} from "react";
+import {Box, Container, Typography} from "@mui/material";
+import AppBar from "./components/apppbar";
+import Banner from "./components/banner";
+import Promotions from "./components/promotions";
+import Products from "./components/products";
 
 function App() {
+
+    useEffect(()=>{
+        document.title ="React-responsive"
+    },[])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container
+        sx={{
+            maxWidth:'xl',
+            background:"#fff"
+        }}
+    >
+        <AppBar/>
+        <Banner />
+        <Promotions/>
+        <Box display='flex' justifyContent='center' sx={{pt:4,pb:4}}>
+           <Typography variant='h4' >Our Products</Typography>
+        </Box>
+        <Products/>
+    </Container>
   );
 }
 
