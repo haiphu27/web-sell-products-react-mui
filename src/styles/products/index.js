@@ -12,7 +12,6 @@ export const Product = styled(Box)(({ theme }) => ({
     [theme.breakpoints.up("md")]: {
         position: "relative",
     },
-
 }));
 
 export const ProductImage = styled("img")(({ src, theme }) => ({
@@ -31,8 +30,8 @@ export const ProductActionButton = styled(IconButton)(() => ({
     margin: 4,
 }));
 
-export const ProductFavButton = styled(ProductActionButton)(({ isFav, theme }) => ({
-    color: isFav ? Colors.primary : Colors.light,
+export const ProductFavButton = styled(ProductActionButton)(({ isfav, theme }) => ({
+    color: isfav ? Colors.primary : Colors.light,
     [theme.breakpoints.up("md")]: {
         position: "absolute",
         right: 0,
@@ -74,3 +73,4 @@ export const ProductActionsWrapper = styled(Box)(({ show, theme }) => ({
         animation: show && `${slideInRight} 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both`,
     }
 }));
+

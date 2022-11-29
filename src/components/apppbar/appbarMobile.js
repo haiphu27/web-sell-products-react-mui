@@ -6,17 +6,18 @@ import {
     Menu
 } from "@mui/icons-material";
 import Actions from "./actions";
-
+import {useUIContext} from "../../context/ui";
 
 
 const AppbarMobile = ({matches}) => {
+    const {setDrawerOpen,setShowSearchBox}=useUIContext()
     return (
         <AppbarContainer>
-            <IconButton>
+            <IconButton onClick={()=>setDrawerOpen(true)} >
                 <Menu/>
             </IconButton>
             <AppbarHeader textAlign={'center'} variant={'h4'}> My Bags </AppbarHeader>
-            <IconButton>
+            <IconButton  onClick={()=>setShowSearchBox(true)} >
                 <Search/>
             </IconButton>
             <Actions matches={matches}/>

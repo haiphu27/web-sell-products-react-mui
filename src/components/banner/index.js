@@ -1,6 +1,13 @@
 import React from 'react';
 import {Typography, useMediaQuery, useTheme} from "@mui/material";
-import {BannerContainer, BannerContent, BannerDescription, BannerImage, BannerTitle} from "../../styles/banner";
+import {
+    BannerContainer,
+    BannerContent,
+    BannerDescription,
+    BannerImage,
+    BannerShopButton,
+    BannerTitle
+} from "../../styles/banner";
 
 const Banner = () => {
     const theme=useTheme()
@@ -15,6 +22,7 @@ const Banner = () => {
                     <BannerDescription>
                         The electric eels are a genus, Electrophorus, of tropical freshwater fish from South America in the family Gymnotidae. They are electric fish, and can stun their prey by delivering shocks at up to 860 volts
                     </BannerDescription>
+                    <BannerShopButton color='primary'>Show now</BannerShopButton>
                 </BannerContent>
 
             </BannerContainer>

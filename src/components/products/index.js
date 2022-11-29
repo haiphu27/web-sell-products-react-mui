@@ -24,7 +24,6 @@ const Products = () => {
                 <SingleProductMobile product={product} matches={matches}/>
                 :<SingleProductDesktop product={product} matches={matches}/>
             }
-
         </Grid>
     ))
 

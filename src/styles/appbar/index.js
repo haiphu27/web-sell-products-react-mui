@@ -1,6 +1,7 @@
-import {Box, List, styled, Typography} from "@mui/material";
+import {Box, Button, IconButton, List, styled, Typography} from "@mui/material";
 import {Colors} from "../theme";
 import '@fontsource/montez'
+import {position} from "polished";
 
 //container
 export const AppbarContainer = styled(Box)(() => ({
@@ -8,7 +9,7 @@ export const AppbarContainer = styled(Box)(() => ({
     marginTop: 4,
     justifyContent: 'center',
     alignItems: 'center',
-    padding: '2px 8px'
+    padding: '2px 8px',
 }))
 
 //header
@@ -39,5 +40,14 @@ export const ActionIconsContainerMobile = styled(Box)(() => ({
     borderTop:`1px solid ${Colors.border}`
 }))
 
-export const ActionIconsContainerDesktop = styled(Box)(() => ({}))
+export const ActionIconsContainerDesktop = styled(Box)(() => ({
+    flexGrow:0
+}))
+
+export const DrawerCLoseButton = styled(IconButton)(()=> ({
+position:'absolute',
+    top:0,
+    left:'170px',
+    zIndex: 9999
+}))
 

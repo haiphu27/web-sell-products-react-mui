@@ -10,7 +10,6 @@ const AppBar = () => {
     return (
         <div>
             {matches ? <AppbarMobile matches={matches}/>:<AppbarDesktop matches={matches}/>}
-
         </div>
     );
 };
